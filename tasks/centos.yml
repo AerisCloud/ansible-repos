@@ -27,8 +27,8 @@
 
 - name: "Setup remote repositories"
   get_url: >
-    url="{{remote_repositories_url}}/{{centos_distribution}}/{{item}}.repo"
-    dest="/etc/yum.repos.d/{{item}}.repo"
+    url="{{item}}"
+    dest="/etc/yum.repos.d/{{item | basename}}"
     owner=root
     group=root
     mode=0644
