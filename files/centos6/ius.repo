@@ -1,0 +1,107 @@
+[ius]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch
+#baseurl=http://dl.iuscommunity.org/pub/ius/stable/CentOS/6/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-debuginfo]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Debug
+#baseurl=http://dl.iuscommunity.org/pub/ius/stable/CentOS/6/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-source]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/stable/CentOS/6/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-testing]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Testing
+#baseurl=http://dl.iuscommunity.org/pub/ius/testing/CentOS/6/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-testing&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-testing-debuginfo]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Testing Debug
+#baseurl=http://dl.iuscommunity.org/pub/ius/testing/CentOS/6/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-testing-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-testing-source]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Testing Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/testing/CentOS/6/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-testing-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-dev]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Dev
+#baseurl=http://dl.iuscommunity.org/pub/ius/development/CentOS/6/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-dev&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-dev-debuginfo]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Dev Debug Info
+#baseurl=http://dl.iuscommunity.org/pub/ius/development/CentOS/6/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-dev-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-dev-source]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Dev Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/development/CentOS/6/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-dev-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-archive]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Archive
+#baseurl=http://dl.iuscommunity.org/pub/ius/archive/CentOS/6/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-archive&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-archive-debuginfo]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Archive Debug
+#baseurl=http://dl.iuscommunity.org/pub/ius/archive/CentOS/6/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-archive-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-archive-source]
+name=IUS Community Packages for Enterprise Linux 6 - $basearch - Archive Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/archive/CentOS/6/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6-archive-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY

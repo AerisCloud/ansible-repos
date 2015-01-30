@@ -1,0 +1,75 @@
+repository_list:
+  couchbase:
+    centos6:
+      repo: couchbase.repo
+    centos7:
+      repo: couchbase.repo
+  endpoint:
+    centos6:
+      repo: endpoint.repo
+      key: RPM-GPG-KEY-endpoint
+    centos7:
+      repo: endpoint.repo
+      key: RPM-GPG-KEY-endpoint
+  epel:
+    centos6:
+      repo: epel.repo
+      key: RPM-GPG-KEY-EPEL-6
+    centos7:
+      repo: epel.repo
+      key: RPM-GPG-KEY-EPEL-7
+  epel-testing:
+    centos6:
+      repo: epel-testing.repo
+      key: RPM-GPG-KEY-EPEL-6
+    centos7:
+      repo: epel-testing.repo
+      key: RPM-GPG-KEY-EPEL-7
+  epel-yum-rawhide:
+    centos6:
+      repo: epel-yum-rawhide.repo
+    centos7:
+      repo: epel-yum-rawhide.repo
+  hortonworks:
+    centos6:
+      repo: hortonworks.repo
+    centos7:
+      repo: hortonworks.repo
+  ius:
+    centos6:
+      repo: ius.repo
+      key: IUS-COMMUNITY-GPG-KEY
+    centos7:
+      repo: ius.repo
+      key: IUS-COMMUNITY-GPG-KEY
+  jenkins:
+    centos6:
+      repo: jenkins.repo
+      key: RPM-GPG-KEY-jenkins
+    centos7:
+      repo: jenkins.repo
+      key: RPM-GPG-KEY-jenkins
+  mongodb:
+    centos6:
+      repo: mongodb.repo
+    centos7:
+      repo: mongodb.repo
+  nginx:
+    centos6:
+      repo: nginx.repo
+    centos7:
+      repo: nginx.repo
+  remi:
+    centos6:
+      repo: remi.repo
+      key: RPM-GPG-KEY-remi
+    centos7:
+      repo: remi.repo
+      key: RPM-GPG-KEY-remi
+  rpmforge:
+    centos6:
+      repo: rpmforge.repo
+      key: RPM-GPG-KEY-rpmforge-dag
+    centos7:
+      repo: rpmforge.repo
+      key: RPM-GPG-KEY-rpmforge-dag

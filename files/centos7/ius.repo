@@ -1,0 +1,107 @@
+[ius]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch
+#baseurl=http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-debuginfo]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Debug
+#baseurl=http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-source]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/stable/CentOS/7/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-dev]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Dev
+#baseurl=http://dl.iuscommunity.org/pub/ius/development/CentOS/7/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-dev&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-dev-debuginfo]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Dev Debug Info
+#baseurl=http://dl.iuscommunity.org/pub/ius/development/CentOS/7/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-dev-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-dev-source]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Dev Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/development/CentOS/7/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-dev-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-testing]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Testing
+#baseurl=http://dl.iuscommunity.org/pub/ius/testing/CentOS/7/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-testing&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-testing-debuginfo]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Testing Debug
+#baseurl=http://dl.iuscommunity.org/pub/ius/testing/CentOS/7/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-testing-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-testing-source]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Testing Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/testing/CentOS/7/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-testing-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-archive]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Archive
+#baseurl=http://dl.iuscommunity.org/pub/ius/archive/CentOS/7/$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-archive&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-archive-debuginfo]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Archive Debug
+#baseurl=http://dl.iuscommunity.org/pub/ius/archive/CentOS/7/$basearch/debuginfo
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-archive-debuginfo&arch=$basearch
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
+
+[ius-archive-source]
+name=IUS Community Packages for Enterprise Linux 7 - $basearch - Archive Source
+#baseurl=http://dl.iuscommunity.org/pub/ius/archive/CentOS/7/SRPMS
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos7-archive-source&arch=source
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY

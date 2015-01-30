@@ -1,0 +1,39 @@
+# CentOS repository setup
+- name: "Setup repositories"
+  copy: >
+    src="{{centos_distribution}}/{{repository_list[item][centos_distribution]['repo']}}"
+    dest="/etc/yum.repos.d/{{repository_list[item][centos_distribution]['repo']}}"
+    owner=root
+    group=root
+    mode=0644
+  when: "item in repository_list and centos_distribution in repository_list[item]"
+  with_items: repositories[centos_distribution]
+  tags:
+    - files
+    - repos
+
+- name: "Setup GPG keys for repositories"
+  copy: >
+    src="{{centos_distribution}}/keys/{{repository_list[item][centos_distribution]['key']}}"
+    dest="/etc/pki/rpm-gpg/{{repository_list[item][centos_distribution]['key']}}"
+    owner=root
+    group=root
+    mode=0644
+  when: "item in repository_list and centos_distribution in repository_list[item] and 'key' in repository_list[item][centos_distribution]"
+  with_items: repositories[centos_distribution]
+  tags:
+    - files
+    - repos
+
+- name: "Setup remote repositories"
+  get_url: >
+    url="{{remote_repositories_url}}/{{centos_distribution}}/{{item}}.repo"
+    dest="/etc/yum.repos.d/{{item}}.repo"
+    owner=root
+    group=root
+    mode=0644
+  when: centos_distribution in remote_repositories
+  with_items: remote_repositories[centos_distribution]
+  tags:
+    - files
+    - repos
