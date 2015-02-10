@@ -1,2 +1,14 @@
----
+galaxy_info:
+  author: Christophe Robin <crobin@wizcorp.jp>
+  description: Manage CentOS yum repositories
+  company: Wizcorp K.K.
+  license: BSD
+  min_ansible_version: 1.2
+  platforms:
+    - name: EL
+      versions:
+        - all
+  categories:
+    - packaging
+    - system
 allow_duplicates: yes
