@@ -12,3 +12,4 @@ galaxy_info:
     - packaging
     - system
 allow_duplicates: yes
+dependencies: []
