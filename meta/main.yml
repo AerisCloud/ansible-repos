@@ -2,7 +2,7 @@ galaxy_info:
   author: Christophe Robin <crobin@wizcorp.jp>
   description: Manage CentOS yum repositories
   company: Wizcorp K.K.
-  license: BSD
+  license: MIT
   min_ansible_version: 1.8.1
   platforms:
     - name: EL
@@ -12,3 +12,4 @@ galaxy_info:
     - packaging
     - system
 allow_duplicates: yes
+dependencies: []
