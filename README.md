@@ -58,7 +58,7 @@ name                                                                          | 
 [`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
 
-_nb:_ `epel`, `ius` and `remi` also providers `debuginfo` and `source` variants of their repos.
+_nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
 ### CentOS 7
 
@@ -79,5 +79,5 @@ name                                                                          | 
 [`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
 
-_nb:_ `epel`, `ius` and `remi` also providers `debuginfo` and `source` variants of their repos.
+_nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
