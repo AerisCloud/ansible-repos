@@ -7,7 +7,7 @@
     group=root
     mode=0644
   when: "item in repository_list and centos_distribution in repository_list[item]"
-  with_items: repositories[centos_distribution]
+  with_items: repositories[centos_distribution]|default([])
   tags:
     - files
     - repos
@@ -20,7 +20,7 @@
     group=root
     mode=0644
   when: "item in repository_list and centos_distribution in repository_list[item] and 'key' in repository_list[item][centos_distribution]"
-  with_items: repositories[centos_distribution]
+  with_items: repositories[centos_distribution]|default([])
   tags:
     - files
     - repos
@@ -33,7 +33,7 @@
     group=root
     mode=0644
   when: centos_distribution in remote_repositories
-  with_items: remote_repositories[centos_distribution]
+  with_items: remote_repositories[centos_distribution]|default([])
   tags:
     - files
     - repos
