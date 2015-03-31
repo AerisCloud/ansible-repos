@@ -48,7 +48,8 @@ name                                                                          | 
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
-[`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel` `epel-testing`
+[`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
+[`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`
 [`epel-yum-rawhide`](https://repos.fedorapeople.org/repos/james/yum-rawhide/) | `epel-yum-rawhide`
 [`hortonworks`](http://hortonworks.com/)                                      | `ambari-1x` `HDP-1.3.0.0` `HDP-UTILS-1.1.0.15`
 [`ius`](https://iuscommunity.org/pages/About.html)                            | `ius` `ius-testing` `ius-dev` `ius-archive`
@@ -69,7 +70,8 @@ name                                                                          | 
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
-[`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel` `epel-testing`
+[`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
+[`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`
 [`epel-yum-rawhide`](https://repos.fedorapeople.org/repos/james/yum-rawhide/) | `epel-yum-rawhide`
 [`hortonworks`](http://hortonworks.com/)                                      | `ambari-1x` `HDP-1.3.0.0` `HDP-UTILS-1.1.0.15`
 [`ius`](https://iuscommunity.org/pages/About.html)                            | `ius` `ius-testing` `ius-dev` `ius-archive`
