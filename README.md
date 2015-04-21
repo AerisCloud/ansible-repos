@@ -21,7 +21,7 @@ In your role's meta, add a dependency to this role using the syntax described be
 ```yaml
 # my_role/meta/main.yml
 dependencies:
-  - role: repos
+  - role: aeriscloud.repos
     # repositories are repositories officially supported by the role
     repositories:
       # this will install the officials mongodb and epel repos
