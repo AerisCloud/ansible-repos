@@ -4,6 +4,13 @@ repository_list:
       repo: couchbase.repo
     centos7:
       repo: couchbase.repo
+  elasticsearch:
+    centos6:
+      repo: elasticsearch.repo
+      key: GPG-KEY-elasticsearch
+    centos7:
+      repo: elasticsearch.repo
+      key: GPG-KEY-elasticsearch
   endpoint:
     centos6:
       repo: endpoint.repo
