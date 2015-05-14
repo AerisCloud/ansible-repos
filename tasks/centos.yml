@@ -1,12 +1,12 @@
 # CentOS repository setup
 - name: "Setup repositories"
-  copy: >
-    src="{{centos_distribution}}/{{repository_list[item][centos_distribution]['repo']}}"
-    dest="/etc/yum.repos.d/{{repository_list[item][centos_distribution]['repo']}}"
+  template: >
+    src="{{centos_distribution}}/{{repository_list[item['name']|default(item)][centos_distribution]['repo']}}.j2"
+    dest="/etc/yum.repos.d/{{repository_list[item['name']|default(item)][centos_distribution]['repo']}}"
     owner=root
     group=root
     mode=0644
-  when: "item in repository_list and centos_distribution in repository_list[item]"
+  when: "item['name']|default(item) in repository_list and centos_distribution in repository_list[item['name']|default(item)]"
   with_items: repositories[centos_distribution]|default([])
   tags:
     - files
@@ -14,12 +14,12 @@
 
 - name: "Setup GPG keys for repositories"
   copy: >
-    src="{{centos_distribution}}/keys/{{repository_list[item][centos_distribution]['key']}}"
-    dest="/etc/pki/rpm-gpg/{{repository_list[item][centos_distribution]['key']}}"
+    src="{{centos_distribution}}/keys/{{repository_list[item['name']|default(item)][centos_distribution]['key']}}"
+    dest="/etc/pki/rpm-gpg/{{repository_list[item['name']|default(item)][centos_distribution]['key']}}"
     owner=root
     group=root
     mode=0644
-  when: "item in repository_list and centos_distribution in repository_list[item] and 'key' in repository_list[item][centos_distribution]"
+  when: "item['name']|default(item) in repository_list and centos_distribution in repository_list[item['name']|default(item)] and 'key' in repository_list[item['name']|default(item)][centos_distribution]"
   with_items: repositories[centos_distribution]|default([])
   tags:
     - files

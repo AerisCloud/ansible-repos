@@ -3,7 +3,7 @@ name=IUS Community Packages for Enterprise Linux 6 - $basearch
 #baseurl=http://dl.iuscommunity.org/pub/ius/stable/CentOS/6/$basearch
 mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-centos6&arch=$basearch
 failovermethod=priority
-enabled=0
+enabled={{item['enabled']|default(0)}}
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/IUS-COMMUNITY-GPG-KEY
 

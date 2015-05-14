@@ -28,6 +28,11 @@ dependencies:
       centos6:
         - epel
         - mongodb
+        # by default repos are disabled, but you can enable them using the following syntax
+        # also repos of type testing/debuginfo/dev can not be enabled unless the repo file is
+        # dedicated to it (ie. epel-testing)
+        - name: elasticsearch
+          enabled: true
       # but only the mongodb repo when using centos7
       centos7:
         - mongodb
@@ -47,7 +52,7 @@ Supported Repositories
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
-[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-1.5`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
 [`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
 [`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`
@@ -70,7 +75,7 @@ become available.
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
-[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-1.5`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
 [`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
 [`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`

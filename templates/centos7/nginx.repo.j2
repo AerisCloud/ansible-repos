@@ -2,4 +2,4 @@
 name=nginx repo
 baseurl=http://nginx.org/packages/centos/7/$basearch/
 gpgcheck=0
-enabled=0
+enabled={{item['enabled']|default(0)}}
