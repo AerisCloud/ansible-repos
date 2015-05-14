@@ -47,6 +47,7 @@ Supported Repositories
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
 [`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
 [`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`
@@ -69,6 +70,7 @@ become available.
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
 [`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
 [`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`
