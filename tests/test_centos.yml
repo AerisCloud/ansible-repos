@@ -1,0 +1,45 @@
+---
+# File for ansible-role-test (https://github.com/aeriscloud/ansible-role-test)
+name: "Centos tests"
+playbook:
+- hosts: all
+  sudo: yes
+  roles:
+  - role: "@ROLE_NAME@"
+    repositories:
+      centos6:
+      - elasticsearch
+      - name: mongodb
+        enabled: 1
+      centos7:
+      - elasticsearch
+      - name: mongodb
+        enabled: 1
+  tasks:
+  - name: "Check that the repo files are here"
+    stat: path=/etc/yum.repos.d/{{item}}.repo
+    with_items:
+    - elasticsearch
+    - mongodb
+    when: ansible_distribution == 'CentOS'
+  - name: "Check that elasticsearch is not enabled"
+    command: yum info elasticsearch
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'CentOS'
+  - fail: "elasticsearch should not be available by default"
+    when: "ansible_distribution == 'CentOS' and result['rc'] == 0"
+  - name: "Check that the repo can be enabled though"
+    command: yum info elasticsearch --enablerepo="elasticsearch-1.5"
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'CentOS'
+  - fail: "elasticsearch should be available with --enablerepo"
+    when: "ansible_distribution == 'CentOS' and result['rc'] != 0"
+  - name: "Check that mongodb is enabled"
+    command: yum info mongodb-org-server
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'CentOS'
+  - fail: "mongodb should be available"
+    when: "ansible_distribution == 'CentOS' and result['rc'] != 0"

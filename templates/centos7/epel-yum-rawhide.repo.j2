@@ -3,5 +3,5 @@
 [epel-yum-rawhide]
 name=The rawhide version of yum rebuilt for older releases
 baseurl=http://repos.fedorapeople.org/repos/james/yum-rawhide/epel-$releasever/$basearch/
-enabled=0
+enabled={{item['enabled']|default(0)}}
 gpgcheck=0
