@@ -25,14 +25,24 @@
     - files
     - repos
 
-- name: "Setup remote repositories"
+- name: "Setup remote repositories (basic repo)"
   get_url: >
     url="{{item}}"
     dest="/etc/yum.repos.d/{{item | basename}}"
     owner=root
     group=root
     mode=0644
-  when: centos_distribution in remote_repositories
+  when: centos_distribution in remote_repositories and item.endswith('repo')
+  with_items: remote_repositories[centos_distribution]|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Setup remote repositories (rpm repo)"
+  yum: >
+    name="{{item}}"
+    state="present"
+  when: centos_distribution in remote_repositories and item.endswith('rpm')
   with_items: remote_repositories[centos_distribution]|default([])
   tags:
     - files
