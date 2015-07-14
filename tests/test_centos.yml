@@ -33,7 +33,7 @@ playbook:
   - fail: "elasticsearch should not be available by default"
     when: "ansible_distribution == 'CentOS' and result['rc'] == 0"
   - name: "Check that the repo can be enabled though"
-    command: yum info elasticsearch --enablerepo="elasticsearch-1.6"
+    command: yum info elasticsearch --enablerepo="elasticsearch"
     register: result
     ignore_errors: yes
     when: ansible_distribution == 'CentOS'
