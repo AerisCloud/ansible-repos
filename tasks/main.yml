@@ -6,3 +6,8 @@
 - include: centos.yml centos_distribution='centos7'
   when: "ansible_distribution == 'CentOS' and ansible_distribution_major_version|int == 7"
 
+- include: debian.yml debian_distribution='wheezy'
+  when: "ansible_distribution == 'Debian' and ansible_distribution_major_version|int == 7"
+
+- include: debian.yml debian_distribution='jessie'
+  when: "ansible_distribution == 'Debian' and ansible_distribution_major_version|int == 8"
