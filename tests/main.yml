@@ -1,6 +1,6 @@
 ---
 # File for ansible-role-test (https://github.com/aeriscloud/ansible-role-test)
-name: "Centos tests"
+name: "Tests"
 playbook:
 - hosts: all
   sudo: yes
@@ -15,10 +15,24 @@ playbook:
       - elasticsearch
       - name: mongodb
         enabled: 1
+      wheezy:
+      - elasticsearch
+      - jenkins
+      - mongodb
+      - nginx
+      - percona
+      jessie:
+      - elasticsearch
+      - jenkins
+      - mongodb
+      - nginx
+      - percona
     remote_repositories:
       centos7:
       - http://www.percona.com/downloads/percona-release/redhat/0.1-3/percona-release-0.1-3.noarch.rpm
   tasks:
+
+  # Centos tests
   - name: "Check that the repo files are here"
     stat: path=/etc/yum.repos.d/{{item}}.repo
     with_items:
@@ -53,3 +67,45 @@ playbook:
     when: ansible_distribution == 'CentOS' and ansible_distribution_major_version|int == 7
   - fail: "Percona DB should be available"
     when: "ansible_distribution == 'CentOS' and ansible_distribution_major_version|int == 7 and result['rc'] != 0"
+
+
+  # Debian tests
+  - name: "Check that elasticsearch is available on Debian"
+    command: apt-cache show elasticsearch
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'Debian'
+  - fail: "elasticsearch should be available with --enablerepo"
+    when: "ansible_distribution == 'Debian' and result['rc'] != 0"
+
+  - name: "Check that jenkins is available on Debian"
+    command: apt-cache show jenkins
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'Debian'
+  - fail: "elasticsearch should be available"
+    when: "ansible_distribution == 'Debian' and result['rc'] != 0"
+
+  - name: "Check that mongodb is available on Debian"
+    command: apt-cache show mongodb
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'Debian'
+  - fail: "elasticsearch should be available"
+    when: "ansible_distribution == 'Debian' and result['rc'] != 0"
+
+  - name: "Check that nginx is available on Debian"
+    command: apt-cache show nginx
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'Debian'
+  - fail: "elasticsearch should be available"
+    when: "ansible_distribution == 'Debian' and result['rc'] != 0"
+
+  - name: "Check that Percona is available on Debian"
+    command: apt-cache show percona-server-server percona-server-client
+    register: result
+    ignore_errors: yes
+    when: ansible_distribution == 'Debian'
+  - fail: "elasticsearch should be available"
+    when: "ansible_distribution == 'Debian' and result['rc'] != 0"
