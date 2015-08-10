@@ -1,14 +1,4 @@
 # Debian apt sources setup
-- name: "Setup sources.list.d repositories"
-  apt_repository: >
-    state=present
-    repo="deb {{ repository_list[item][debian_distribution]['url'] }} {{ repository_list[item][debian_distribution]['pool'] }}"
-  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)]"
-  with_items: repositories[debian_distribution]|default([])
-  tags:
-    - files
-    - repos
-
 - name: "Upload GPG keys for repositories"
   copy: >
     src="debian/keys/{{ repository_list[item][debian_distribution]['key'] }}"
@@ -34,3 +24,13 @@
     state=absent
   when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)] and repository_list[item][debian_distribution]['key'] is defined"
   with_items: repositories[debian_distribution]|default([])
+
+- name: "Setup sources.list.d repositories"
+  apt_repository: >
+    state=present
+    repo="deb {{ repository_list[item][debian_distribution]['url'] }} {{ repository_list[item][debian_distribution]['pool'] }}"
+  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)]"
+  with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos

@@ -109,6 +109,8 @@ name                                                                          | 
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
+[`percona`](https://www.percona.com)                                          | `percona`
+
 
 _nb:_ `deb-src` is not provided. `deb` is only provided.
 
@@ -122,5 +124,6 @@ name                                                                          | 
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
+[`percona`](https://www.percona.com)                                          | `percona`
 
 _nb:_ `deb-src` is not provided. `deb` is only provided.

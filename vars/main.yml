@@ -1,7 +1,7 @@
 repository_list:
   backports:
     wheezy:
-      url: "http://http.debian.net/debian"
+      url: "http://ftp.jp.debian.org/debian"
       pool: "{{ ansible_distribution_release }}-backports main"
   couchbase:
     centos6:
@@ -111,6 +111,15 @@ repository_list:
       key: "nginx_signing.key"
       url: "http://nginx.org/packages/debian/"
       pool: "{{ ansible_distribution_release }} nginx"
+  percona:
+    wheezy:
+      key: "percona.key"
+      url: "http://repo.percona.com/apt"
+      pool: "{{ ansible_distribution_release }} main"
+    jessie:
+      key: "percona.key"
+      url: "http://repo.percona.com/apt"
+      pool: "{{ ansible_distribution_release }} main"
   remi:
     centos6:
       repo: remi.repo
