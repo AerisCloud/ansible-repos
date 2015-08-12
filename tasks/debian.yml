@@ -8,6 +8,9 @@
     mode=0644
   when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)] and repository_list[item][debian_distribution]['key'] is defined"
   with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos
 
 - name: "Setup GPG keys for repositories"
   apt_key: >
@@ -24,6 +27,9 @@
     state=absent
   when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)] and repository_list[item][debian_distribution]['key'] is defined"
   with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos
 
 - name: "Setup sources.list.d repositories"
   apt_repository: >
@@ -38,7 +44,5 @@
 
 - name: "Update apt cache"
   apt: update_cache=yes
-  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)]"
   tags:
-    - files
     - repos
