@@ -1,0 +1,48 @@
+# Debian apt sources setup
+- name: "Upload GPG keys for repositories"
+  copy: >
+    src="debian/keys/{{ repository_list[item][debian_distribution]['key'] }}"
+    dest="/tmp/{{ repository_list[item][debian_distribution]['key'] }}"
+    owner=root
+    group=root
+    mode=0644
+  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)] and repository_list[item][debian_distribution]['key'] is defined"
+  with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Setup GPG keys for repositories"
+  apt_key: >
+    file="/tmp/{{ repository_list[item][debian_distribution]['key'] }}"
+  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)] and repository_list[item][debian_distribution]['key'] is defined"
+  with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Clean up GPG keys for repositories"
+  file: >
+    path="/tmp/{{ repository_list[item][debian_distribution]['key'] }}"
+    state=absent
+  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)] and repository_list[item][debian_distribution]['key'] is defined"
+  with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Setup sources.list.d repositories"
+  apt_repository: >
+    state=present
+    repo="deb {{ repository_list[item][debian_distribution]['url'] }} {{ repository_list[item][debian_distribution]['pool'] }}"
+    update_cache=no
+  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)]"
+  with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Update apt cache"
+  apt: update_cache=yes
+  tags:
+    - repos

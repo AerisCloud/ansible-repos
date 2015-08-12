@@ -10,6 +10,8 @@ name     | tagname   | notes
 ---------|-----------|---------------------------------------------------------------------------------------
 CentOS 6 | `centos6` | Repositories are disabled by default, make sure to use `enablerepo=` in your yum calls
 CentOS 7 | `centos7` | Ditto CentOS 6
+Debian 7 | `wheezy`  | APT Repositories are disabled by default, make sure to use `default_release=wheezy-backports` in your apt calls
+Debian 8 | `jessie`  | Ditto Debian 7. Use `default_release=jessie-backports` in your apt calls
 
 Usage
 -----
@@ -24,7 +26,7 @@ dependencies:
   - role: aeriscloud.repos
     # repositories are repositories officially supported by the role
     repositories:
-      # this will install the officials mongodb and epel repos
+      # this will install the official mongodb and epel repos
       centos6:
         - epel
         - mongodb
@@ -36,7 +38,14 @@ dependencies:
       # but only the mongodb repo when using centos7
       centos7:
         - mongodb
-    # when you have custom repos you can use this syntax to retrieve the repo online
+      # This will install wheezy backports and the offical nginx repo
+      wheezy:
+        - backports
+        - nginx
+      # support for jessie backports will be available when the jessie backports is available.
+      jessie:
+        - nginx
+    # (CentOS only) when you have custom CentOS repos you can use this syntax to retrieve the repo online
     remote_repositories:
       centos6:
         - http://myorg.tld/myrepo.repo
@@ -90,3 +99,31 @@ name                                                                          | 
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
+### Debian 7
+
+name                                                                          | provides
+------------------------------------------------------------------------------|-----------------------------------------------
+[`backports`](https://packages.debian.org/wheezy-backports/)                  | `backports`
+[`dotdeb`](https://www.dotdeb.org)                                            | `dotdeb`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
+[`mongodb`](http://mongodb.org/)                                              | `mongodb`
+[`nginx`](http://nginx.org/)                                                  | `nginx`
+[`percona`](https://www.percona.com)                                          | `percona`
+
+
+_nb:_ `deb-src` is not provided. `deb` is only provided.
+
+### Debian 8
+
+name                                                                          | provides
+------------------------------------------------------------------------------|-----------------------------------------------
+[`backports`](https://packages.debian.org/jessie-backports/)                  | `backports`
+[`dotdeb`](https://www.dotdeb.org)                                            | `dotdeb`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
+[`mongodb`](http://mongodb.org/)                                              | `mongodb`
+[`nginx`](http://nginx.org/)                                                  | `nginx`
+[`percona`](https://www.percona.com)                                          | `percona`
+
+_nb:_ `deb-src` is not provided. `deb` is only provided.

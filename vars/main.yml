@@ -1,9 +1,22 @@
 repository_list:
+  backports:
+    wheezy:
+      url: "http://ftp.jp.debian.org/debian"
+      pool: "{{ ansible_distribution_release }}-backports main"
   couchbase:
     centos6:
       repo: couchbase.repo
     centos7:
       repo: couchbase.repo
+  dotdeb:
+    wheezy:
+      key: "dotdeb.gpg"
+      url: "http://packages.dotdeb.org"
+      pool: "{{ ansible_distribution_release }} all"
+    jessie:
+      key: "dotdeb.gpg"
+      url: "http://packages.dotdeb.org"
+      pool: "{{ ansible_distribution_release }} all"
   elasticsearch:
     centos6:
       repo: elasticsearch.repo
@@ -11,6 +24,14 @@ repository_list:
     centos7:
       repo: elasticsearch.repo
       key: GPG-KEY-elasticsearch
+    wheezy:
+      key: "GPG-KEY-elasticsearch"
+      url: "http://packages.elastic.co/elasticsearch/1.7/debian"
+      pool: "stable main"
+    jessie:
+      key: "GPG-KEY-elasticsearch"
+      url: "http://packages.elastic.co/elasticsearch/1.7/debian"
+      pool: "stable main"
   endpoint:
     centos6:
       repo: endpoint.repo
@@ -56,16 +77,49 @@ repository_list:
     centos7:
       repo: jenkins.repo
       key: RPM-GPG-KEY-jenkins
+    wheezy:
+      key: "jenkins-ci.org.key"
+      url: "http://pkg.jenkins-ci.org/debian"
+      pool: "binary/"
+    jessie:
+      key: "jenkins-ci.org.key"
+      url: "http://pkg.jenkins-ci.org/debian"
+      pool: "binary/"
   mongodb:
     centos6:
       repo: mongodb.repo
     centos7:
       repo: mongodb.repo
+    wheezy:
+      key: "10gen-gpg-key.asc"
+      url: "http://repo.mongodb.org/apt/debian"
+      pool: "wheezy/mongodb-org/3.0 main"
+    jessie:
+      key: "10gen-gpg-key.asc"
+      url: "http://repo.mongodb.org/apt/debian"
+      pool: "wheezy/mongodb-org/3.0 main"
   nginx:
     centos6:
       repo: nginx.repo
     centos7:
       repo: nginx.repo
+    wheezy:
+      key: "nginx_signing.key"
+      url: "http://nginx.org/packages/debian/"
+      pool: "{{ ansible_distribution_release }} nginx"
+    jessie:
+      key: "nginx_signing.key"
+      url: "http://nginx.org/packages/debian/"
+      pool: "{{ ansible_distribution_release }} nginx"
+  percona:
+    wheezy:
+      key: "percona.key"
+      url: "http://repo.percona.com/apt"
+      pool: "{{ ansible_distribution_release }} main"
+    jessie:
+      key: "percona.key"
+      url: "http://repo.percona.com/apt"
+      pool: "{{ ansible_distribution_release }} main"
   remi:
     centos6:
       repo: remi.repo
