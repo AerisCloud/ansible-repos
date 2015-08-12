@@ -29,8 +29,16 @@
   apt_repository: >
     state=present
     repo="deb {{ repository_list[item][debian_distribution]['url'] }} {{ repository_list[item][debian_distribution]['pool'] }}"
+    update_cache=no
   when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)]"
   with_items: repositories[debian_distribution]|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Update apt cache"
+  apt: update_cache=yes
+  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)]"
   tags:
     - files
     - repos
