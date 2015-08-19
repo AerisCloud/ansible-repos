@@ -120,6 +120,21 @@ repository_list:
       key: "percona.key"
       url: "http://repo.percona.com/apt"
       pool: "{{ ansible_distribution_release }} main"
+  mysql:
+    centos6:
+      repo: mysql.repo
+      key: RPM-GPG-KEY-mysql
+    centos7:
+      repo: mysql.repo
+      key: RPM-GPG-KEY-mysql
+    wheezy:
+      key: GPG-KEY-mysql
+      url: "http://repo.mysql.com/apt/debian"
+      pool: "{{ ansible_distribution_release }} mysql-5.6"
+    jessie:
+      key: GPG-KEY-mysql
+      url: "http://repo.mysql.com/apt/debian"
+      pool: "{{ ansible_distribution_release }} mysql-5.6"
   remi:
     centos6:
       repo: remi.repo
