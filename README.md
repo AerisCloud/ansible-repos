@@ -73,6 +73,7 @@ name                                                                          | 
 [`nginx`](http://nginx.org/)                                                  | `nginx`
 [`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
@@ -96,6 +97,7 @@ name                                                                          | 
 [`nginx`](http://nginx.org/)                                                  | `nginx`
 [`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
@@ -110,7 +112,7 @@ name                                                                          | 
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
 [`percona`](https://www.percona.com)                                          | `percona`
-
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
 
 _nb:_ `deb-src` is not provided. `deb` is only provided.
 
@@ -125,5 +127,6 @@ name                                                                          | 
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
 [`percona`](https://www.percona.com)                                          | `percona`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
 
 _nb:_ `deb-src` is not provided. `deb` is only provided.
