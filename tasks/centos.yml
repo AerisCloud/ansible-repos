@@ -6,6 +6,7 @@
     owner=root
     group=root
     mode=0644
+  sudo: True
   when: "item['name']|default(item) in repository_list and centos_distribution in repository_list[item['name']|default(item)]"
   with_items: repositories[centos_distribution]|default([])
   tags:
@@ -19,6 +20,7 @@
     owner=root
     group=root
     mode=0644
+  sudo: True
   when: "item['name']|default(item) in repository_list and centos_distribution in repository_list[item['name']|default(item)] and 'key' in repository_list[item['name']|default(item)][centos_distribution]"
   with_items: repositories[centos_distribution]|default([])
   tags:
@@ -32,6 +34,7 @@
     owner=root
     group=root
     mode=0644
+  sudo: True
   when: centos_distribution in remote_repositories and item.endswith('repo')
   with_items: remote_repositories[centos_distribution]|default([])
   tags:
@@ -42,6 +45,7 @@
   yum: >
     name="{{item}}"
     state="present"
+  sudo: True
   when: centos_distribution in remote_repositories and item.endswith('rpm')
   with_items: remote_repositories[centos_distribution]|default([])
   tags:
