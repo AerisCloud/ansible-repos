@@ -1,6 +1,6 @@
 galaxy_info:
   author: Christophe Robin <crobin@wizcorp.jp>
-  description: Manage CentOS yum repositories
+  description: Manage CentOS yum and Debian apt repositories
   company: Wizcorp K.K.
   license: MIT
   min_ansible_version: 1.9.1
