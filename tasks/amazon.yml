@@ -1,0 +1,49 @@
+# Amazon repository setup
+- name: "Setup repositories"
+  template: >
+    src="amazon/{{repository_list[item['name']|default(item)]['amazon']['repo']}}.j2"
+    dest="/etc/yum.repos.d/{{repository_list[item['name']|default(item)]['amazon']['repo']}}"
+    owner=root
+    group=root
+    mode=0644
+  when: "item['name']|default(item) in repository_list and 'amazon' in repository_list[item['name']|default(item)]"
+  with_items: repositories['amazon']|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Setup GPG keys for repositories"
+  copy: >
+    src="amazon/keys/{{repository_list[item['name']|default(item)]['amazon']['key']}}"
+    dest="/etc/pki/rpm-gpg/{{repository_list[item['name']|default(item)]['amazon']['key']}}"
+    owner=root
+    group=root
+    mode=0644
+  when: "item['name']|default(item) in repository_list and 'amazon' in repository_list[item['name']|default(item)] and 'key' in repository_list[item['name']|default(item)]['amazon']"
+  with_items: repositories['amazon']|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Setup remote repositories (basic repo)"
+  get_url: >
+    url="{{item}}"
+    dest="/etc/yum.repos.d/{{item | basename}}"
+    owner=root
+    group=root
+    mode=0644
+  when: "'amazon' in remote_repositories and item.endswith('repo')"
+  with_items: remote_repositories['amazon']|default([])
+  tags:
+    - files
+    - repos
+
+- name: "Setup remote repositories (rpm repo)"
+  yum: >
+    name="{{item}}"
+    state="present"
+  when: "'amazon' in remote_repositories and item.endswith('rpm')"
+  with_items: remote_repositories['amazon']|default([])
+  tags:
+    - files
+    - repos

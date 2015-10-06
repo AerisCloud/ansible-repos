@@ -59,6 +59,8 @@ repository_list:
     centos7:
       repo: epel-yum-rawhide.repo
   hortonworks:
+    amazon:
+      repo: hortonworks.repo
     centos6:
       repo: hortonworks.repo
     centos7:

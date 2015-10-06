@@ -1,0 +1,31 @@
+[ambari-1.x]
+name=Ambari 1.x
+baseurl=http://public-repo-1.hortonworks.com/ambari/centos6/1.x/GA
+gpgcheck=1
+gpgkey=http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled={{item['enabled']|default(0)}}
+priority=1
+
+[Updates-ambari-1.2.4.9]
+name=ambari-1.2.4.9 - Updates
+baseurl=http://public-repo-1.hortonworks.com/ambari/centos6/1.x/updates/1.2.4.9
+gpgcheck=1
+gpgkey=http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled={{item['enabled']|default(0)}}
+priority=1
+
+[HDP-1.3.0.0]
+name=Hortonworks Data Platform Version - HDP-1.3.0.0
+baseurl=http://public-repo-1.hortonworks.com/HDP/centos6/1.x/GA/1.3.0.0
+gpgcheck=1
+gpgkey=http://public-repo-1.hortonworks.com/HDP/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled={{item['enabled']|default(0)}}
+priority=1
+
+[HDP-UTILS-1.1.0.15]
+name=Hortonworks Data Platform Utils Version - HDP-UTILS-1.1.0.15
+baseurl=http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.15/repos/centos6
+gpgcheck=1
+gpgkey=http://public-repo-1.hortonworks.com/HDP/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled={{item['enabled']|default(0)}}
+priority=1
