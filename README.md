@@ -6,12 +6,13 @@ This role installs repositories and signing keys for them on your server.
 Supported OSes
 --------------
 
-name     | tagname   | notes
----------|-----------|---------------------------------------------------------------------------------------
-CentOS 6 | `centos6` | Repositories are disabled by default, make sure to use `enablerepo=` in your yum calls
-CentOS 7 | `centos7` | Ditto CentOS 6
-Debian 7 | `wheezy`  | APT Repositories are disabled by default, make sure to use `default_release=wheezy-backports` in your apt calls
-Debian 8 | `jessie`  | Ditto Debian 7. Use `default_release=jessie-backports` in your apt calls
+name         | tagname   | notes
+-------------|-----------|---------------------------------------------------------------------------------------
+CentOS 6     | `centos6` | Repositories are disabled by default, make sure to use `enablerepo=` in your yum calls
+CentOS 7     | `centos7` | Ditto CentOS 6
+Amazon Linux | `amazon`  | Ditto CentOS 6
+Debian 7     | `wheezy`  | APT Repositories are disabled by default, make sure to use `default_release=wheezy-backports` in your apt calls
+Debian 8     | `jessie`  | Ditto Debian 7. Use `default_release=jessie-backports` in your apt calls
 
 Usage
 -----
@@ -78,8 +79,10 @@ name                                                                          | 
 [`postgresql 9.3`](http://yum.postgresql.org/repopackages.php)                | `pgdg93`
 [`postgresql 9.4`](http://yum.postgresql.org/repopackages.php)                | `pgdg94`
 [`postgresql 9.5`](http://yum.postgresql.org/repopackages.php)                | `pgdg95`
-[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
+[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
+
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
@@ -102,13 +105,23 @@ name                                                                          | 
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
-[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
-[`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
 [`postgresql 9.3`](http://yum.postgresql.org/repopackages.php)                | `pgdg93`
 [`postgresql 9.4`](http://yum.postgresql.org/repopackages.php)                | `pgdg94`
 [`postgresql 9.5`](http://yum.postgresql.org/repopackages.php)                | `pgdg95`
+[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
+[`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
+
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
+
+### Amazon Linux
+
+Actually almost everything can be found up to date on the Amazon repos (both amzn and amzn-preview), only adding the few
+softwares that might be missing from it.
+
+name                                                                          | provides
+------------------------------------------------------------------------------|-----------------------------------------------
+[`hortonworks`](http://hortonworks.com/)                                      | `ambari-1x` `HDP-1.3.0.0` `HDP-UTILS-1.1.0.15`
 
 ### Debian 7
 
