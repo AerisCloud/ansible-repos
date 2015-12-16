@@ -71,9 +71,9 @@ name                                                                          | 
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
-[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
+[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
-[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
@@ -95,9 +95,9 @@ name                                                                          | 
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
-[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-test`
+[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
-[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
