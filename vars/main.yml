@@ -151,3 +151,7 @@ repository_list:
     centos7:
       repo: rpmforge.repo
       key: RPM-GPG-KEY-rpmforge-dag
+  slc6-devtoolset:
+    centos6:
+      repo: slc6-devtoolset.repo
+      key: RPM-GPG-KEY-cern
