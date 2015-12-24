@@ -71,10 +71,18 @@ name                                                                          | 
 [`ius`](https://iuscommunity.org/pages/About.html)                            | `ius` `ius-testing` `ius-dev` `ius-archive`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
 [`nginx`](http://nginx.org/)                                                  | `nginx`
+[`postgresql 9.0`](http://yum.postgresql.org/repopackages.php)                | `pgdg90`
+[`postgresql 9.1`](http://yum.postgresql.org/repopackages.php)                | `pgdg91`
+[`postgresql 9.2`](http://yum.postgresql.org/repopackages.php)                | `pgdg92`
+[`postgresql 9.3`](http://yum.postgresql.org/repopackages.php)                | `pgdg93`
+[`postgresql 9.4`](http://yum.postgresql.org/repopackages.php)                | `pgdg94`
+[`postgresql 9.5`](http://yum.postgresql.org/repopackages.php)                | `pgdg95`
 [`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
+
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
@@ -95,10 +103,14 @@ name                                                                          | 
 [`ius`](https://iuscommunity.org/pages/About.html)                            | `ius` `ius-testing` `ius-dev` `ius-archive`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
+[`postgresql 9.3`](http://yum.postgresql.org/repopackages.php)                | `pgdg93`
+[`postgresql 9.4`](http://yum.postgresql.org/repopackages.php)                | `pgdg94`
+[`postgresql 9.5`](http://yum.postgresql.org/repopackages.php)                | `pgdg95`
 [`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
-[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
+
 
 _nb:_ `epel`, `ius` and `remi` also provides the `debuginfo` and `source` variants of their repos.
 
@@ -120,9 +132,11 @@ name                                                                          | 
 [`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
 [`percona`](https://www.percona.com)                                          | `percona`
-[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
+[`postgresql`](http://www.postgresql.org)                                     | `postgresql`
+
 
 _nb:_ `deb-src` is not provided. `deb` is only provided.
 
@@ -135,8 +149,10 @@ name                                                                          | 
 [`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
 [`percona`](https://www.percona.com)                                          | `percona`
-[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
+[`postgresql`](http://www.postgresql.org)                                     | `postgresql`
+
 
 _nb:_ `deb-src` is not provided. `deb` is only provided.
