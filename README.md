@@ -73,6 +73,7 @@ name                                                                          | 
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
 [`nginx`](http://nginx.org/)                                                  | `nginx`
+[`percona`](https://www.percona.com)                                          | `percona-release-x86_64`
 [`postgresql 9.0`](http://yum.postgresql.org/repopackages.php)                | `pgdg90`
 [`postgresql 9.1`](http://yum.postgresql.org/repopackages.php)                | `pgdg91`
 [`postgresql 9.2`](http://yum.postgresql.org/repopackages.php)                | `pgdg92`
@@ -106,6 +107,7 @@ name                                                                          | 
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
+[`percona`](https://www.percona.com)                                          | `percona-release-x86_64`
 [`postgresql 9.3`](http://yum.postgresql.org/repopackages.php)                | `pgdg93`
 [`postgresql 9.4`](http://yum.postgresql.org/repopackages.php)                | `pgdg94`
 [`postgresql 9.5`](http://yum.postgresql.org/repopackages.php)                | `pgdg95`
