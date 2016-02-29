@@ -3,6 +3,9 @@ repository_list:
     wheezy:
       url: "http://ftp.jp.debian.org/debian"
       pool: "{{ ansible_distribution_release }}-backports main"
+    jessie:
+      url: "http://ftp.jp.debian.org/debian"
+      pool: "{{ ansible_distribution_release }}-backports main"
   couchbase:
     centos6:
       repo: couchbase.repo
@@ -17,7 +20,7 @@ repository_list:
       key: "dotdeb.gpg"
       url: "http://packages.dotdeb.org"
       pool: "{{ ansible_distribution_release }} all"
-  elasticsearch:
+  elasticsearch-2.x:
     centos6:
       repo: elasticsearch.repo
       key: GPG-KEY-elasticsearch
@@ -26,11 +29,11 @@ repository_list:
       key: GPG-KEY-elasticsearch
     wheezy:
       key: "GPG-KEY-elasticsearch"
-      url: "http://packages.elastic.co/elasticsearch/1.7/debian"
+      url: "http://packages.elasticsearch.org/elasticsearch/2.x/debian"
       pool: "stable main"
     jessie:
       key: "GPG-KEY-elasticsearch"
-      url: "http://packages.elastic.co/elasticsearch/1.7/debian"
+      url: "http://packages.elasticsearch.org/elasticsearch/2.x/debian"
       pool: "stable main"
   endpoint:
     centos6:

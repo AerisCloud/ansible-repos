@@ -62,7 +62,7 @@ Supported Repositories
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
-[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-2.x`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
 [`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
 [`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`
@@ -96,7 +96,7 @@ become available.
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
-[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-2.x`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
 [`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
 [`epel-testing`](https://fedoraproject.org/wiki/EPEL/testing)                 | `epel-testing`
@@ -132,7 +132,7 @@ name                                                                          | 
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`backports`](https://packages.debian.org/wheezy-backports/)                  | `backports`
 [`dotdeb`](https://www.dotdeb.org)                                            | `dotdeb`
-[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-2.x`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
@@ -149,7 +149,7 @@ name                                                                          | 
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`backports`](https://packages.debian.org/jessie-backports/)                  | `backports`
 [`dotdeb`](https://www.dotdeb.org)                                            | `dotdeb`
-[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch`
+[`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-2.x`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community`
