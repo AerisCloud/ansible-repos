@@ -70,6 +70,7 @@ name                                                                          | 
 [`hortonworks`](http://hortonworks.com/)                                      | `ambari-1x` `HDP-1.3.0.0` `HDP-UTILS-1.1.0.15`
 [`ius`](https://iuscommunity.org/pages/About.html)                            | `ius` `ius-testing` `ius-dev` `ius-archive`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
+[`mesophere`](https://www.mesosphere.com/)                                    | `mesosphere`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
 [`nginx`](http://nginx.org/)                                                  | `nginx`
@@ -104,6 +105,7 @@ name                                                                          | 
 [`hortonworks`](http://hortonworks.com/)                                      | `ambari-1x` `HDP-1.3.0.0` `HDP-UTILS-1.1.0.15`
 [`ius`](https://iuscommunity.org/pages/About.html)                            | `ius` `ius-testing` `ius-dev` `ius-archive`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
+[`mesophere`](https://www.mesosphere.com/)                                    | `mesosphere`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 [`nginx`](http://nginx.org/)                                                  | `nginx`

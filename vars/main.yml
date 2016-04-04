@@ -90,6 +90,11 @@ repository_list:
       key: "jenkins-ci.org.key"
       url: "http://pkg.jenkins-ci.org/debian"
       pool: "binary/"
+  mesosphere:
+    centos6:
+      url: "http://repos.mesosphere.com/el/6/noarch/RPMS/mesosphere-el-repo-6-2.noarch.rpm"
+    centos7:
+      url: "http://repos.mesosphere.com/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm"
   mongodb:
     centos6:
       repo: mongodb.repo
