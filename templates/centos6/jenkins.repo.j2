@@ -1,13 +1,13 @@
 [jenkins]
 name=Jenkins
-baseurl=http://pkg.jenkins-ci.org/redhat
+baseurl=http://pkg.jenkins.io/redhat
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins
 enabled=0
 
 [jenkins-stable]
 name=Jenkins-stable
-baseurl=http://pkg.jenkins-ci.org/redhat-stable
+baseurl=http://pkg.jenkins.io/redhat-stable
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins
 enabled={{item['enabled']|default(0)}}
