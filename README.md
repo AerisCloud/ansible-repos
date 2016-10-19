@@ -72,7 +72,7 @@ name                                                                          | 
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
 [`mesophere`](https://www.mesosphere.com/)                                    | `mesosphere`
 [`mongodb`](http://mongodb.org/)                                              | `mongodb`
-[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community` 
+[`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 [`nginx`](http://nginx.org/)                                                  | `nginx`
 [`percona`](https://www.percona.com)                                          | `percona-release-x86_64`
 [`postgresql 9.0`](http://yum.postgresql.org/repopackages.php)                | `pgdg90`
@@ -97,6 +97,7 @@ become available.
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`couchbase`](http://www.couchbase.com/)                                      | `couchbase`
+[`docker`](https://www.docker.com/)                                           | `dockerrepo`
 [`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-2.x`
 [`endpoint`](https://packages.endpoint.com/)                                  | `endpoint`
 [`epel`](https://fedoraproject.org/wiki/EPEL)                                 | `epel`
