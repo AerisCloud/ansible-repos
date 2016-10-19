@@ -31,6 +31,14 @@
     - files
     - repos
 
+- name: "Check that we have the proper apt transports"
+  apt: pkg=apt-transport-https state=present update_cache=yes
+  when: "item['name']|default(item) in repository_list and debian_distribution in repository_list[item['name']|default(item)] and repository_list[item][debian_distribution]['url']|match('https.*')"
+  with_items: "{{ repositories[debian_distribution]|default([]) }}"
+  tags:
+    - files
+    - repos
+
 - name: "Setup sources.list.d repositories"
   apt_repository: >
     state=present

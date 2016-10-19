@@ -14,12 +14,10 @@ repository_list:
   docker:
     centos7:
       repo: docker.repo
-    wheezy:
-      url: "http://http.debian.net/debian"
-      pool: "{{ ansible_distribution_release }}-backports main"
     jessie:
-      url: "http://http.debian.net/debian"
-      pool: "{{ ansible_distribution_release }}-backports main"
+      key: "docker.gpg"
+      url: "https://apt.dockerproject.org/repo"
+      pool: "debian-{{ ansible_distribution_release }} main"
   dotdeb:
     wheezy:
       key: "dotdeb.gpg"
