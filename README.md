@@ -134,6 +134,7 @@ name                                                                          | 
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`backports`](https://packages.debian.org/wheezy-backports/)                  | `backports`
+[`docker`](https://www.docker.com/)                                           | `docker`
 [`dotdeb`](https://www.dotdeb.org)                                            | `dotdeb`
 [`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-2.x`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`
@@ -151,6 +152,7 @@ _nb:_ `deb-src` is not provided. `deb` is only provided.
 name                                                                          | provides
 ------------------------------------------------------------------------------|-----------------------------------------------
 [`backports`](https://packages.debian.org/jessie-backports/)                  | `backports`
+[`docker`](https://www.docker.com/)                                           | `docker`
 [`dotdeb`](https://www.dotdeb.org)                                            | `dotdeb`
 [`elasticsearch`](https://www.elastic.co/products/elasticsearch)              | `elasticsearch-2.x`
 [`jenkins`](http://jenkins-ci.org/)                                           | `jenkins`

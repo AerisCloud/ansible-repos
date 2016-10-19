@@ -11,6 +11,15 @@ repository_list:
       repo: couchbase.repo
     centos7:
       repo: couchbase.repo
+  docker:
+    centos7:
+      repo: docker.repo
+    wheezy:
+      url: "http://http.debian.net/debian"
+      pool: "{{ ansible_distribution_release }}-backports main"
+    jessie:
+      url: "http://http.debian.net/debian"
+      pool: "{{ ansible_distribution_release }}-backports main"
   dotdeb:
     wheezy:
       key: "dotdeb.gpg"

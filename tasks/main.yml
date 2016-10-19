@@ -1,16 +1,21 @@
 # Install repositories
 
 - include: amazon.yml
+  static: no
   when: "ansible_distribution == 'Amazon'"
 
 - include: centos.yml centos_distribution='centos6'
+  static: no
   when: "ansible_distribution == 'CentOS' and ansible_distribution_major_version|int == 6"
 
 - include: centos.yml centos_distribution='centos7'
+  static: no
   when: "ansible_distribution == 'CentOS' and ansible_distribution_major_version|int == 7"
 
 - include: debian.yml debian_distribution='wheezy'
+  static: no
   when: "ansible_distribution == 'Debian' and ansible_distribution_major_version|int == 7"
 
 - include: debian.yml debian_distribution='jessie'
+  static: no
   when: "ansible_distribution == 'Debian' and ansible_distribution_major_version|int == 8"
