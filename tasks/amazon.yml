@@ -7,7 +7,7 @@
     group=root
     mode=0644
   when: "item['name']|default(item) in repository_list and 'amazon' in repository_list[item['name']|default(item)]"
-  with_items: repositories['amazon']|default([])
+  with_items: "{{ repositories['amazon']|default([]) }}"
   tags:
     - files
     - repos
@@ -20,7 +20,7 @@
     group=root
     mode=0644
   when: "item['name']|default(item) in repository_list and 'amazon' in repository_list[item['name']|default(item)] and 'key' in repository_list[item['name']|default(item)]['amazon']"
-  with_items: repositories['amazon']|default([])
+  with_items: "{{ repositories['amazon']|default([]) }}"
   tags:
     - files
     - repos
@@ -33,7 +33,7 @@
     group=root
     mode=0644
   when: "'amazon' in remote_repositories and item.endswith('repo')"
-  with_items: remote_repositories['amazon']|default([])
+  with_items: "{{ remote_repositories['amazon']|default([]) }}"
   tags:
     - files
     - repos
@@ -43,7 +43,7 @@
     name="{{item}}"
     state="present"
   when: "'amazon' in remote_repositories and item.endswith('rpm')"
-  with_items: remote_repositories['amazon']|default([])
+  with_items: "{{ remote_repositories['amazon']|default([]) }}"
   tags:
     - files
     - repos
