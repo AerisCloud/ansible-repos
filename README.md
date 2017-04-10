@@ -81,7 +81,7 @@ name                                                                          | 
 [`postgresql 9.3`](http://yum.postgresql.org/repopackages.php)                | `pgdg93`
 [`postgresql 9.4`](http://yum.postgresql.org/repopackages.php)                | `pgdg94`
 [`postgresql 9.5`](http://yum.postgresql.org/repopackages.php)                | `pgdg95`
-[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
+[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-php71` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
 [`mysql`](https://www.mysql.fr/products/community/)                           | `mysql56-community` `mysql-connectors-community` `mysql-tools-community`
 [`slc6-devtoolset`](http://linux.web.cern.ch/linux/devtoolset/)               | `gcc-4.8` and other related tools
@@ -114,7 +114,7 @@ name                                                                          | 
 [`postgresql 9.3`](http://yum.postgresql.org/repopackages.php)                | `pgdg93`
 [`postgresql 9.4`](http://yum.postgresql.org/repopackages.php)                | `pgdg94`
 [`postgresql 9.5`](http://yum.postgresql.org/repopackages.php)                | `pgdg95`
-[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-test`
+[`remi`](http://rpms.famillecollet.com/)                                      | `remi` `remi-php55` `remi-php56` `remi-php70` `remi-php71` `remi-test`
 [`rpmforge`](http://repoforge.org/)                                           | `rpmforge` `rpmforge-extra` `rpmforge-testing`
 
 

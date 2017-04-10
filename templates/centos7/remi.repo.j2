@@ -33,6 +33,15 @@ enabled={{item['enabled']|default(0)}}
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
 
+[remi-php71]
+name=Les RPM de remi de PHP 7.1 pour Enterprise Linux 7 - $basearch
+#baseurl=http://rpms.famillecollet.com/enterprise/7/php71/$basearch/
+mirrorlist=http://rpms.famillecollet.com/enterprise/7/php71/mirror
+# WARNING: If you enable this repository, you must also enable "remi"
+enabled={{item['enabled']|default(0)}}
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+
 [remi-test]
 name=Les RPM de remi en test pour Enterprise Linux 7 - $basearch
 #baseurl=http://rpms.famillecollet.com/enterprise/7/test/$basearch/
