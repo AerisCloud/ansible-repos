@@ -6,6 +6,11 @@ repository_list:
     jessie:
       url: "http://ftp.jp.debian.org/debian"
       pool: "{{ ansible_distribution_release }}-backports main"
+  ceph:
+    centos6:
+      repo: ceph.repo
+    centos7:
+      repo: ceph.repo
   couchbase:
     centos6:
       repo: couchbase.repo
