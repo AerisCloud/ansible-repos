@@ -21,8 +21,8 @@ repository_list:
       repo: docker.repo
     jessie:
       key: "docker.gpg"
-      url: "https://apt.dockerproject.org/repo"
-      pool: "debian-{{ ansible_distribution_release }} main"
+      url: "https://download.docker.com/linux/debian/"
+      pool: "{{ ansible_distribution_release }} stable"
   dotdeb:
     wheezy:
       key: "dotdeb.gpg"
